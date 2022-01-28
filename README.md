@@ -7,3 +7,5 @@ test: "It should return a pizza with two properties, and multiple toppings as a 
 code:  const pizza = new pizza (["cheese", "pepperoni"], "medium")
 Expected Output {toppings : ["cheese", "pepperoni"], size: "medium" }
 
+Describe: Pricing for toppings and size
+Test: 

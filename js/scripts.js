@@ -22,9 +22,33 @@ $(document).ready(function() {
 
 //Business Logic for Pizza Pricing
 
-
-
-if (topping1 = 'Mozzarella') {
+let total = 0
+//Topping1 pricing
+if (topping1 = 'mozzarella') {
   total + 2
-};
+} else if (topping1 = 'chedder') {
+  total + 1
+} else if (topping1 = 'veganCheese') {
+  total + 3
+}
+
+//Topping2 pricing
+if (topping2 = 'sausage') {
+  total + 4
+} else if (topping2 = 'pepperoni') {
+  total + 2
+} else if (topping2 = 'noMeat') {
+  total + 0
+}
+
+//Size Pricing
+if (size = 'medium') {
+  total + 10
+} else if (size = 'large') {
+  total + 15
+} else if (size = 'small') {
+  total + 7
+}
+
+
 
