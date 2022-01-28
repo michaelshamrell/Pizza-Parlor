@@ -12,3 +12,10 @@ Test: "It should add the corresponding topping total to the pizza"
 code: const pizza = new pizza (["mozzarella", "pepperoni"], "medium")
   total;
 Expected Output {toppings : ["cheese", "pepperoni"], size: "medium" total = 14}
+
+Describe : Adding sum of price
+Test: "It should add together all the prices to a sum"
+code: Pizza.prototype.pizzaPrice = function() {
+  return topping1.total  + topping2.total + size.total;
+};
+Expected Output {total: ---}

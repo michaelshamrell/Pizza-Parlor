@@ -12,13 +12,14 @@ Pizza.prototype.allToppings = function() {
 
 //Business Logic for Pizza Pricing
 
-let total = 0
+
+
 //Topping1 pricing
 if (topping1 = 'mozzarella') {
   total + 2
 } else if (topping1 = 'chedder') {
   total + 1
-} else if (topping1 = 'veganCheese') {
+} else  {
   total + 3
 }
 
@@ -27,7 +28,7 @@ if (topping2 = 'sausage') {
   total + 4
 } else if (topping2 = 'pepperoni') {
   total + 2
-} else if (topping2 = 'noMeat') {
+} else  {
   total + 0
 }
 
@@ -36,18 +37,21 @@ if (size = 'medium') {
   total + 10
 } else if (size = 'large') {
   total + 15
-} else if (size = 'small') {
+} else {
   total + 7
 }
 
+//Adding topping price together
 
 
 //User Logic
 
 $(document).ready(function() {
-  $("form#pizzaParlor").submit(function(event) {
+  $("form#pizzaParlor").click(function(event) {
     const topping1Input = ("input#topping1").val();
     const topping2Input = ("input#topping2").val();
     const sizeInput = ("input#size").val();
+    event.preventDefault();
+    console.log(Pizza.total);
   });
 });
