@@ -1,44 +1,45 @@
 
 //Business Logic For Pizza
-function Pizza(topping1, topping2, size) {
+function Pizza(topping1, topping2, size, total) {
   this.topping1 = topping1;
   this.topping2 = topping2;
   this.size = size;
+  this.total = total;
 }
 
-Pizza.prototype.allToppings = function() {
-  return this.topping1 + " " + this.topping2;
+Pizza.prototype.pizzaPrice = function() {
+  return topping1.total  + topping2.total + size.total;
 };
 
 //Business Logic for Pizza Pricing
 
-
+const pizza = new Pizza(0,0,0,0)
 
 //Topping1 pricing
 if (topping1 = 'mozzarella') {
-  total + 2
+  Pizza.total + 2
 } else if (topping1 = 'chedder') {
-  total + 1
+  Pizza.total + 1
 } else  {
-  total + 3
+  Pizza.total + 3
 }
 
 //Topping2 pricing
 if (topping2 = 'sausage') {
-  total + 4
+  Pizza.total + 4
 } else if (topping2 = 'pepperoni') {
-  total + 2
+  Pizza.total + 2
 } else  {
   total + 0
 }
 
 //Size Pricing
 if (size = 'medium') {
-  total + 10
+  Pizza.total + 10
 } else if (size = 'large') {
-  total + 15
+  Pizza.total + 15
 } else {
-  total + 7
+  Pizza.total + 7
 }
 
 //Adding topping price together
@@ -52,6 +53,6 @@ $(document).ready(function() {
     const topping2Input = ("input#topping2").val();
     const sizeInput = ("input#size").val();
     event.preventDefault();
-    console.log(Pizza.total);
+    console.log(pizzaPrice.total);
   });
 });
