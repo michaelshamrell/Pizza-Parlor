@@ -8,4 +8,7 @@ code:  const pizza = new pizza (["cheese", "pepperoni"], "medium")
 Expected Output {toppings : ["cheese", "pepperoni"], size: "medium" }
 
 Describe: Pricing for toppings and size
-Test: 
+Test: "It should add the corresponding topping total to the pizza"
+code: const pizza = new pizza (["mozzarella", "pepperoni"], "medium")
+  total;
+Expected Output {toppings : ["cheese", "pepperoni"], size: "medium" total = 14}
