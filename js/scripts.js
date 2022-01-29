@@ -1,45 +1,47 @@
 
 //Business Logic For Pizza
-function Pizza(topping1, topping2, size, total) {
-  this.topping1 = topping1;
-  this.topping2 = topping2;
+function Pizza(topping1, topping2, size, total,) {
+  this.topping1 = topping1Input;
+  this.topping2 = topping2Input;
   this.size = size;
-  this.total = total;
+  this.total = 0;
 }
 
-Pizza.prototype.pizzaPrice = function() {
-  return topping1.total  + topping2.total + size.total;
-};
+function pizzaPrice() {
 
+  
+  
+  return this.total; " "
+ 
+}
+ 
 //Business Logic for Pizza Pricing
-
-const pizza = new Pizza(0,0,0,0)
-
 //Topping1 pricing
-if (topping1 = 'mozzarella') {
-  Pizza.total + 2
-} else if (topping1 = 'chedder') {
-  Pizza.total + 1
+
+if (this.topping1 = 'mozzarella') {
+  this.total += 2
+} else if (this.topping1 = 'chedder') {
+  this.total += 1
 } else  {
-  Pizza.total + 3
+  this.total += 3
 }
 
 //Topping2 pricing
-if (topping2 = 'sausage') {
-  Pizza.total + 4
-} else if (topping2 = 'pepperoni') {
-  Pizza.total + 2
+if (this.topping2 = 'sausage') {
+  this.total += 4
+} else if (this.topping2 = 'pepperoni') {
+  this.total += 2
 } else  {
-  total + 0
+  this.total += 0
 }
 
 //Size Pricing
-if (size = 'medium') {
-  Pizza.total + 10
-} else if (size = 'large') {
-  Pizza.total + 15
+if (this.size = 'medium') {
+  this.total += 10
+} else if (this.size = 'large') {
+  this.total += 15
 } else {
-  Pizza.total + 7
+  this.total += 7
 }
 
 //Adding topping price together
@@ -49,9 +51,9 @@ if (size = 'medium') {
 
 $(document).ready(function() {
   $("form#pizzaParlor").click(function(event) {
-    const topping1Input = ("input#topping1").val();
-    const topping2Input = ("input#topping2").val();
-    const sizeInput = ("input#size").val();
+    const topping1Input = $("input#topping1").val();
+    const topping2Input = $("input#topping2").val();
+    const sizeInput = $("input#size").val();
     event.preventDefault();
     console.log(pizzaPrice.total);
   });
