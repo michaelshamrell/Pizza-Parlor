@@ -1,45 +1,52 @@
 
 //Business Logic For Pizza
 function Pizza(topping1, topping2, size) {
-  this.topping1Input = topping1;
-  this.topping2Input = topping2;
-  this.sizeInput = size;
+  this.topping1 = topping1;
+  this.topping2 = topping2;
+  this.size = size;
+  topping1 = topping1Input;
+  topping2 = topping2Input;
+  size = sizeInput;
 }
-
+let pizzaPriceTotal = 0
+let topping1 = 0
+let topping2 = 0
+let size = 0
 function pizzaPrice() {
+  const topping1Input = ["mozzarella", "cheddar", "veganCheese"]
+  const topping2Input = ["sausage", "pepperoni", "noMeat"]
+  const sizeInput = ["medium", "large", "small"]
   
-
   if (topping1Input = 'mozzarella') {
-    total += 2
-  } else if (topping1Input = 'chedder') {
-    total += 1
+    pizzaPriceTotal += 2
+  } else if (topping1Input = 'cheddar') {
+    pizzaPriceTotal += 1
   } else  {
-    total += 3
+    pizzaPriceTotal += 3
   }
   
   //Topping2 pricing
   if (topping2Input = 'sausage') {
-    total += 4
+    pizzaPriceTotal += 4
   } else if (topping2Input = 'pepperoni') {
-    total += 2
+    pizzaPriceTotal += 2
   } else  {
-    total += 0
+    pizzaPriceTotal += 0
   }
   
   //Size Pricing
   if (sizeInput = 'medium') {
-    total += 10
+    pizzaPriceTotal += 10
   } else if (sizeInput = 'large') {
-    total += 15
+    pizzaPriceTotal += 15
   } else {
-    total += 7
+    pizzaPriceTotal += 7
   }
   
-  var total = pizzaPrice()
-  return total
+  
 };
 
-total = pizzaPrice
+
  
 //Business Logic for Pizza Pricing
 //Topping1 pricing
@@ -52,11 +59,11 @@ total = pizzaPrice
 //User Logic
 
 $(document).ready(function() {
-  $("form#pizzaParlor").click(function(event) {
-    const topping1Input = $("input#topping1").val();
-    const topping2Input = $("input#topping2").val();
-    const sizeInput = $("input#size").val();
+  $("form#pizzaParlor").submit(function(event) {
+    topping1 = $("input#topping1").val();
+    topping2 = $("input#topping2").val();
+    size = $("input#size").val();
     event.preventDefault();
-    console.log (total);
+    console.log(pizzaPriceTotal);
   });
 });
