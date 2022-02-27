@@ -1,53 +1,57 @@
+'use strict';
 
 //Business Logic For Pizza
 function Pizza(topping1, topping2, size) {
   this.topping1 = topping1;
   this.topping2 = topping2;
   this.size = size;
-  topping1 = topping1Input;
-  topping2 = topping2Input;
-  size = sizeInput;
+
 }
+// Pizza.topping1 = $("select#topping1").val();
+// Pizza.topping2 = $("select#topping2").val();
+// Pizza.size = $("select#size").val();
 let pizzaPriceTotal = 0
-let topping1 = 0
-let topping2 = 0
-let size = 0
+// let topping1 = 0
+// let topping2 = 0
+// let topping3 = 0
 function pizzaPrice() {
-  const topping1Input = ["mozzarella", "cheddar", "veganCheese"]
-  const topping2Input = ["sausage", "pepperoni", "noMeat"]
-  const sizeInput = ["medium", "large", "small"]
-  
-  if (topping1Input = 'mozzarella') {
-    pizzaPriceTotal += 2
-  } else if (topping1Input = 'cheddar') {
-    pizzaPriceTotal += 1
+  // const topping1Input = ["mozzarella", "cheddar", "veganCheese"]
+  // const topping2Input = ["sausage", "pepperoni", "noMeat"]
+  // const sizeInput = ["medium", "large", "small"]
+ Pizza.prototype.pizzaTopping1 = function() { 
+  if ( Pizza.topping1 = "mozzarella") {
+    this.topping1 + 2
+  } else if ( Pizza.topping1 = "cheddar") {
+    this.topping1 + 1
   } else  {
-    pizzaPriceTotal += 3
+    this.topping1 + 3
   }
-  
+}
   //Topping2 pricing
-  if (topping2Input = 'sausage') {
-    pizzaPriceTotal += 4
-  } else if (topping2Input = 'pepperoni') {
-    pizzaPriceTotal += 2
+  Pizza.prototype.pizzaTopping2 = function() {
+  if (Pizza.topping2 = "sausage") {
+    this.topping2 + 4
+  } else if (Pizza.topping2 = "pepperoni") {
+    this.topping2 + 2
   } else  {
-    pizzaPriceTotal += 0
+    this.topping2 + 0
   }
-  
-  //Size Pricing
-  if (sizeInput = 'medium') {
-    pizzaPriceTotal += 10
-  } else if (sizeInput = 'large') {
-    pizzaPriceTotal += 15
+ }
+  Pizza.prototype.pizzaSize = function() {
+  if (Pizza.size = "medium") {
+    this.size + 10
+  } else if (Pizza.size = "large") {
+    this.size + 15
   } else {
-    pizzaPriceTotal += 7
+    this.size + 7
   }
-  
+} 
   
 };
+function pizzaPriceTotalMath() {
+  pizzaPriceTotal = this.topping1 + this.topping2 + this.size
+}
 
-
- 
 //Business Logic for Pizza Pricing
 //Topping1 pricing
 
@@ -57,13 +61,11 @@ function pizzaPrice() {
 
 
 //User Logic
-
 $(document).ready(function() {
   $("form#pizzaParlor").submit(function(event) {
-    topping1 = $("input#topping1").val();
-    topping2 = $("input#topping2").val();
-    size = $("input#size").val();
     event.preventDefault();
+    pizzaPrice()
+    pizzaPriceTotalMath()
     console.log(pizzaPriceTotal);
   });
 });
