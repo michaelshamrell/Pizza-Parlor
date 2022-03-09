@@ -11,3 +11,7 @@ body {
     border-radius: 12px;
     width:fit-content
   }
+  p {
+    font-size: larger;
+    font-weight: bolder;
+  }
