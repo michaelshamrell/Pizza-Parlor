@@ -1,0 +1,13 @@
+body {
+  background-image: url("https://media.istockphoto.com/photos/time-to-cook-that-pizza-picture-id1219230573?b=1&k=20&m=1219230573&s=170667a&w=0&h=TPj0rs3Mv0b2HYnoDK2b2ctjF3QSg5TFz4Net8CjwRE=");
+  background-repeat: no-repeat, repeat;
+  
+  background-size: cover;
+  color: aliceblue;
+  }
+  .button {
+    /* color: aliceblue; */
+    background-color: aliceblue;
+    border-radius: 12px;
+    width:fit-content
+  }
